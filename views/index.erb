@@ -1,14 +1,8 @@
-<form action="/login" method="post">
-    <h1>login</h1>
-    <input type="text" name="username" placeholder ="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value=" Log in">
-</form>
+<% if user_id %>
+    Welcome to the site <%= user_id %>!
+<% else %>
+    Welcome to the site!
+    <a href="/login"> Login </a>
+<% end %>
 
-<form action="/register" method="post">
-    <h1>Create a User</h1>
-    <input type="text" name="username" placeholder ="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="password" name="confirmedpassword" placeholder="Confirm password">
-    <input type="submit" value=" Log in">
-</form>
+
